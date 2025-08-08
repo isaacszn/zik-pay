@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZikPay - Profile</title>
+  <link rel="stylesheet" href="/assets/styles/bootstrap.min.css">
+  <style>
+    @font-face {
+      font-family: Poppins;
+      src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
+    }
+    
+    body {
+      font: 1rem Poppins, sans-serif;
+      color: black;
+    }
+    
+    .pfp {
+      border: 5px solid #F4A660;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+    
+    /*hr {
+      color: #F4A660; !important
+    }*/
+  </style>
+</head>
+
+<body>
+  <figure class="d-flex justify-content-center align-items-center flex-column">
+    <img id="profile-pfp" class="pfp my-5" width="150" height="150">
+    <input type="file" accept="image/*" id="image-upload"
+    class="form-control d-flex justify-content-center align-items-center mx-auto my-4">
+    <h1 id="fullname"></h1>
+    <hr>
+  </figure>
+  <ul class="my-4 ms-4 fs-3 list-unstyled">
+    <li class="my-3">Personal info</li>
+    <li class="my-3">Settings</li>
+    <li>Terms & Policy</li>
+    <li class="my-3">About ZikPay</li>
+  </ul>
+  <footer class="my-5 ms-4">
+    <button id="logout-btn" class="btn btn-danger btn-lg"></button>
+  </footer>
+  
+  <script src="/assets/scripts/profile_page.js"></script>
+</body>
+
+</html>

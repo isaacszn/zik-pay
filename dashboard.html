@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZikPay - Dashboard</title>
+  <link rel="stylesheet" href="/assets/styles/bootstrap.min.css">
+  <style>
+    @font-face {
+      font-family: Poppins;
+      src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
+    }
+    
+    body {
+      font: 1rem Poppins, sans-serif;
+      /*background-color: #F4A660;*/
+      /*background-color: white;*/
+      color: black;
+    }
+    
+    .primary-color {
+      background-color: #F4A660;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+  <nav class="d-flex justify-content-between align-items-center m-4">
+    <span id="profile-container"><img id="pfp" alt="You" width="50" height="50" style="border-radius: 50%; width: 50; height: 50; border: 2px solid #F4A660" /> <span id="username"></span></span>
+    <img src="/assets/icons/notifications-icon.svg" alt="Notifications icon" width="40" height="40" />
+  </nav>
+  <section class="d-flex justify-content-center align-items-center flex-column p-4 my-5 mx-auto w-75 rounded-4 primary-color">
+    <div>
+      <p>Balance:</p>
+      <h1><span>$</span><span id="balance">0</span><span>.00</span></h1>
+    </div>
+    <div class="d-flex justify-content-around gap-4 align-items-center mt-5 mb-3 mx-auto">
+      <span id="topup">Topup</span>
+      <span id="withdraw">Withdraw</span>
+      <span id="send">Send</span>
+    </div>
+  </section>
+  <section class="d-flex justify-content-center align-items-center flex-column m-5">
+    <h2>Recent transactions:</h2>
+    <div id="recent-transactions">
+      <p id="">No transactions yet.</p>
+    </div>  
+  </section>
+  
+  <footer class="d-flex jusify-content-around align-items-center gap-5 position-fixed bottom-0 ms-3 mx-auto p-2 bg-light">
+    <a href="#"><img src="/assets/icons/home-icon.svg" alt="Home" width="40"height="40" /></a>
+    <a href="#"><img src="/assets/icons/convert-icon.svg" alt="Convert currency" width="40" height="40" /></a>
+    <a href="#"><img src="/assets/icons/shop-icon.svg" alt="Shop" width="40" height="40" /></a>
+    <a href="#"><img src="/assets/icons/credit-card-icon.svg" alt="Virtual card" width="40" height="40" /></a>
+  </footer>
+  
+  <script src="/assets/scripts/dashboard.js"></script>
+</body>
+
+</html>

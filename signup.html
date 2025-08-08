@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZikPay - Signup</title>
+  <link rel="stylesheet" href="/assets/styles/bootstrap.min.css">
+  <style>
+    @font-face {
+      font-family: Poppins;
+      src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
+    }
+    
+    body {
+      font: 1rem Poppins, sans-serif;
+      background-color: #F4A660;
+      /*background-color: #fd7e14;*/
+      color: black;
+    }
+    
+    .logo {
+      width: 138px;
+      height: 54px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <figcaption class=" d-flex justify-content-center align-items-center my-5 mx-auto">
+      <img src="/assets/icons/logo.png" alt="Logo" width="690" height="270" class="logo">
+    </figcaption>
+    <!--<h1 class="text-center mt-5 mb-3 fw-bold">Zik<span class="">Pay</span></h1>-->
+    <h3 class="mx-auto mb-3 w-75">Your all in one Fintech app.</h2>
+  </header>
+  <form class="d-flex justify-content-center align-items-center flex-column mx-auto my-5 p-4 bg-light rounded-4 w-75">
+    <h3 class="fw-bold">Sign up</h3>
+    <br />
+    <label for="fullname" class="form-label">Your fullname?</label>
+    <input type="text" name="fullname" class="form-control" placeholder="John Doe">
+    <br />
+    <label for="username" class="form-label">Username:</label>
+    <input type="text" name="username" class="form-control" placeholder="Johny">
+    <br />
+    <label for="email" class="form-label">Email:</label>
+    <input type="email" name="email" class="form-control" placeholder="johndoe@example.com">
+    <br />
+    <label for="password" class="form-label">Password:</label>
+    <input type="password" name="password" class="form-control" placeholder="6 characters up">
+    <br />
+    <label for="confirm-password" class="form-label">Confirm password:</label>
+    <input type="password" name="confirm-password" class="form-control" placeholder="Use your password">
+    <br /><br />
+    <button class="btn btn-success" type="submit">Sign up</button>
+    <br />
+    <p>Already have an account? <a href="/login.html">Log in</a> rather</p>
+  </form>
+  
+  <script src="/assets/scripts/signup.js"></script>
+</body>
+
+</html>
