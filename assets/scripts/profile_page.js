@@ -41,6 +41,7 @@ document.querySelector('#image-upload').addEventListener('change', () => {
       const balance = userData.balance;
       const recentTransaction = userData.recent;
       const pfpSrc = userData.pfp.trim();
+      const storedNotifications = userData.notifications;
       const userDataNew = {
         fullname: fullName,
         username: userName,
@@ -49,7 +50,8 @@ document.querySelector('#image-upload').addEventListener('change', () => {
         confirmpassword: confirmPassword,
         balance: balance,
         recent: recentTransaction,
-        pfp: pfpSrc
+        pfp: pfpSrc,
+        notifications: storedNotifications
       };
       userDataNew.pfp = fileSrc;
       localStorage.removeItem('userdata');
@@ -64,4 +66,8 @@ document.querySelector('#logout-btn').addEventListener('click', () => {
   setTimeout(() => {
     location.href = '/signup.html';
   }, 1 * 1000);
-})
+});
+
+document.querySelector('#back-btn').addEventListener('click', () => {
+  location.href = '/dashboard.html';
+});

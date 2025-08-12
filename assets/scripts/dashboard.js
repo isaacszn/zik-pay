@@ -37,6 +37,7 @@ document.querySelector('#withdraw').addEventListener('click', () => {
   const recentTransaction = userData.recent;
   const balance = userData.balance;
   const pfpSrc = userData.pfp.trim();
+  const storedNotifications = userData.notifications;
   const userDataNew = {
     fullname: fullName,
     username: userName,
@@ -45,7 +46,8 @@ document.querySelector('#withdraw').addEventListener('click', () => {
     confirmpassword: confirmPassword,
     balance: balance,
     recent: recentTransaction,
-    pfp: pfpSrc
+    pfp: pfpSrc,
+    notifications: storedNotifications
   };
   userDataNew.balance = userDataNew.balance - 50;
   userDataNew.recent = userDataNew.recent -50;
@@ -68,6 +70,7 @@ document.querySelector('#topup').addEventListener('click', () => {
   const balance = userData.balance;
   const recentTransaction = userData.recent;
   const pfpSrc = userData.pfp.trim();
+  const storedNotifications = userData.notifications;
   const userDataNew = {
     fullname: fullName,
     username: userName,
@@ -76,7 +79,8 @@ document.querySelector('#topup').addEventListener('click', () => {
     confirmpassword: confirmPassword,
     balance: balance,
     recent: recentTransaction,
-    pfp: pfpSrc
+    pfp: pfpSrc,
+    notifications: storedNotifications
   };
   userDataNew.balance = userDataNew.balance + 50;
   userDataNew.recent = userDataNew.recent + 50;
@@ -100,7 +104,7 @@ const updateRecentTransactionsUI = () => {
   const body = document.createElement('span');
   const price = document.createElement('span');
   transaction.className = 'd-flex';
-  transaction.className = 'justify-content-around';
+  transaction.className = 'justify-content-between';
   transaction.className = 'align-items-center';
   transaction.className = 'gap-5';
   body.textContent = 'You';
@@ -114,4 +118,8 @@ const updateRecentTransactionsUI = () => {
 
 document.querySelector('#profile-container').addEventListener('click', () => {
   location.href = "/profile_page.html";
+});
+
+document.querySelector('#notifications-btn').addEventListener('click', () => {
+  location.href = "/notifications.html";
 });

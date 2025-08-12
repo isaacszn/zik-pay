@@ -15,7 +15,13 @@ document.querySelector('form').addEventListener('submit', (e) => {
     confirmpassword: confirmPassword,
     balance: 0,
     recent: 0,
-    pfp: ""
+    pfp: "",
+    notifications: {
+      notis1: "$100 added",
+      notis2: "$100 added",
+      notis3: "$100 added",
+      notis4: "$100 added",
+    }
   };
   // Save user data using localStorage API, note I turned the object to JSON
   localStorage.setItem('userdata', JSON.stringify(userData));
